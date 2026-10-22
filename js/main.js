@@ -80,7 +80,10 @@
     history.replaceState(null, "", `#${index + 1}`);
 
     slides[index].scrollTop = 0;
-    if (previous >= 0) stopCounters(slides[previous]);
+    if (previous >= 0) {
+      stopCounters(slides[previous]);
+      resetMonthCards(slides[previous]);
+    }
     runCounters(slides[index]);
 
     if (index === 0) mountSpline();
@@ -91,6 +94,13 @@
   const prev = () => goTo(current - 1);
 
   document.addEventListener("click", (event) => {
+    const monthCard = event.target.closest("[data-month-toggle]");
+    if (monthCard) {
+      event.preventDefault();
+      toggleMonth(monthCard);
+      return;
+    }
+
     const button = event.target.closest("[data-action]");
     if (!button) return;
     const action = button.dataset.action;
@@ -263,6 +273,80 @@
         },
         450 + i * 120,
       );
+    });
+  }
+
+  function formatRise(value, asNow, settled) {
+    if (!asNow && settled) return "38%";
+    const text = value.toFixed(1).replace(".", ",") + "%";
+    return asNow ? "+" + text : text;
+  }
+
+  function paintMonth(card, asNow) {
+    const label = card.querySelector("[data-month-label]");
+    const hint = card.querySelector("[data-month-hint]");
+    if (label) label.textContent = asNow ? "Este mês" : "Mês passado";
+    if (hint) hint.title = asNow ? "Voltar ao mês passado" : "Ver este mês";
+    card.setAttribute(
+      "aria-label",
+      asNow
+        ? "Crescimento deste mês, mais 47,2%. Clique para ver o mês passado."
+        : "Crescimento do mês passado, 38%. Clique para ver este mês.",
+    );
+  }
+
+  function animateRise(card, valueEl, from, to, asNow) {
+    cancelAnimationFrame(card._riseFrame);
+    if (reduceMotion) {
+      card._value = to;
+      valueEl.textContent = formatRise(to, asNow, true);
+      return;
+    }
+
+    const duration = 900;
+    const start = performance.now();
+    const tick = (now) => {
+      const progress = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - progress, 4);
+      const value = from + (to - from) * eased;
+      card._value = value;
+      valueEl.textContent = formatRise(value, asNow, progress === 1);
+      if (progress < 1) card._riseFrame = requestAnimationFrame(tick);
+    };
+    card._riseFrame = requestAnimationFrame(tick);
+  }
+
+  function toggleMonth(card) {
+    const past = parseFloat(card.dataset.past);
+    const now = parseFloat(card.dataset.now);
+    const asNow = card.getAttribute("aria-pressed") !== "true";
+    const from = card._value ?? past;
+    const to = asNow ? now : past;
+    const valueEl = card.querySelector("[data-month-value]");
+
+    card.setAttribute("aria-pressed", String(asNow));
+    card.classList.toggle("is-now", asNow);
+    card.classList.remove("is-launch");
+    clearTimeout(card._launchTimer);
+    if (asNow) {
+      void card.offsetWidth;
+      card.classList.add("is-launch");
+      card._launchTimer = setTimeout(() => card.classList.remove("is-launch"), 980);
+    }
+    paintMonth(card, asNow);
+    if (valueEl) animateRise(card, valueEl, from, to, asNow);
+  }
+
+  function resetMonthCards(slide) {
+    slide.querySelectorAll("[data-month-toggle]").forEach((card) => {
+      cancelAnimationFrame(card._riseFrame);
+      clearTimeout(card._launchTimer);
+      card._value = parseFloat(card.dataset.past);
+      card.classList.remove("is-now", "is-launch");
+      card.setAttribute("aria-pressed", "false");
+      paintMonth(card, false);
+      const valueEl = card.querySelector("[data-month-value]");
+      if (valueEl) valueEl.textContent = "38%";
     });
   }
 

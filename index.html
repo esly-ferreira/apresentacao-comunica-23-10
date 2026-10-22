@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="fonts/inter/inter.css">
   <link rel="stylesheet" href="fonts/phosphor/regular.css">
   <link rel="stylesheet" href="fonts/phosphor/fill.css">
-  <link rel="stylesheet" href="css/style.css?v=36">
+  <link rel="stylesheet" href="css/style.css?v=70">
   <link rel="stylesheet" href="css/profile.css?v=3">
 </head>
 
@@ -49,7 +49,7 @@
 
       <div class="cover-content">
         <h1 class="cover-title is-status reveal" style="--d:1">
-          <span class="cover-over">Apresentação executiva</span>
+          <span class="cover-over">REUNIÃO DE COMUNICAÇÃO</span>
           <span class="cover-name">Status das<br>entregas.</span>
         </h1>
         <p class="cover-sub reveal" style="--d:2">Visão executiva do portfólio</p>
@@ -71,31 +71,50 @@
           <h2 class="slide-title reveal" style="--d:1">O portfólio <em>cresceu.</em></h2>
         </header>
 
-        <div class="board reveal" style="--d:2">
-          <article class="figure">
+        <div class="status-stage reveal" style="--d:2">
+          <article class="figure is-hero">
+            <span class="icon-box icon-lg"><i class="ph-fill ph-folders" aria-hidden="true"></i></span>
             <b data-count="23">23</b>
             <span>Projetos concluídos</span>
           </article>
-          <article class="figure">
-            <b data-count="2392">2392</b>
-            <span>Chamados</span>
-          </article>
-          <article class="figure">
-            <b data-count="2323">2323</b>
-            <span>Resolvidos</span>
-          </article>
-          <article class="figure">
-            <b data-count="59">59</b>
-            <span>Em atendimento</span>
-          </article>
-          <article class="figure">
-            <b data-count="47">47</b>
-            <span>Dias até 31/12</span>
-          </article>
-          <article class="figure">
-            <b data-count="40" data-suffix="%">40%</b>
-            <span>Capacidade em sustentação</span>
-          </article>
+
+          <div class="board board-support">
+            <article class="figure is-quiet">
+              <span class="icon-box is-dim"><i class="ph ph-ticket" aria-hidden="true"></i></span>
+              <div class="figure-copy">
+                <b data-count="2392">2392</b>
+                <span>Chamados</span>
+              </div>
+            </article>
+            <article class="figure">
+              <span class="icon-box"><i class="ph ph-checks" aria-hidden="true"></i></span>
+              <div class="figure-copy">
+                <b data-count="2323">2323</b>
+                <span>Resolvidos</span>
+              </div>
+            </article>
+            <article class="figure">
+              <span class="icon-box"><i class="ph ph-headset" aria-hidden="true"></i></span>
+              <div class="figure-copy">
+                <b data-count="59">59</b>
+                <span>Em atendimento</span>
+              </div>
+            </article>
+            <article class="figure">
+              <span class="icon-box"><i class="ph ph-calendar-blank" aria-hidden="true"></i></span>
+              <div class="figure-copy">
+                <b data-count="47">47</b>
+                <span>Dias até 31/12</span>
+              </div>
+            </article>
+            <article class="figure">
+              <span class="icon-box"><i class="ph ph-gauge" aria-hidden="true"></i></span>
+              <div class="figure-copy">
+                <b data-count="40" data-suffix="%">40%</b>
+                <span>Capacidade em sustentação</span>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -144,17 +163,36 @@
           </article>
 
           <div class="side-figures reveal" style="--d:4">
-            <article class="figure">
-              <b>+47,2%</b>
+            <button class="figure is-rise" type="button" data-month-toggle data-past="38" data-now="47.2" aria-pressed="false" aria-label="Crescimento do mês passado, 38%. Clique para ver este mês.">
+              <span class="rise-when">
+                <span class="chip" data-month-label>Mês passado</span>
+                <span class="rise-hint" data-month-hint aria-hidden="true"><i class="ph ph-arrows-clockwise"></i></span>
+              </span>
+              <div class="rise-stage">
+                <span class="rise-flight" aria-hidden="true">
+                  <svg viewBox="0 0 28 78" fill="none">
+                    <path d="M14 74V24" stroke="url(#riseShaft)" stroke-width="3" stroke-linecap="round" />
+                    <path d="M5 28 L14 8 L23 28" stroke="#f7fff6" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
+                    <defs>
+                      <linearGradient id="riseShaft" x1="14" y1="74" x2="14" y2="24" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#9be29a" stop-opacity="0" />
+                        <stop offset="0.55" stop-color="#9be29a" />
+                        <stop offset="1" stop-color="#ffffff" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </span>
+                <b data-month-value>38%</b>
+              </div>
               <span>Crescimento</span>
-            </article>
+              <span class="rise-meter" aria-hidden="true"><i></i></span>
+            </button>
             <article class="figure">
-              <b>≈ 5</b>
-              <span>Novas entradas por mês</span>
-            </article>
-            <article class="figure">
-              <b data-count="2392">2392</b>
-              <span>Chamados</span>
+              <span class="icon-box"><i class="ph ph-calendar-plus" aria-hidden="true"></i></span>
+              <div class="figure-copy">
+                <b>≈ 5</b>
+                <span>Novas entradas por mês</span>
+              </div>
             </article>
           </div>
         </div>
@@ -174,7 +212,7 @@
           <div class="head-row reveal" style="--d:0">
             <span class="kicker"><span class="kicker-num">03</span>O problema</span>
           </div>
-          <h2 class="slide-title reveal" style="--d:1">Por que os projetos estão <em>demorando?</em></h2>
+          <h2 class="slide-title reveal" style="--d:1">Onde está o <em>problema?</em></h2>
         </header>
 
         <div class="lead reveal" style="--d:2">
@@ -200,23 +238,41 @@
             </div>
           </div>
 
-          <div class="ops-row reveal" style="--d:4">
+          <article class="served reveal" style="--d:4">
+            <span class="icon-box icon-lg"><i class="ph-fill ph-checks" aria-hidden="true"></i></span>
+            <div class="served-main">
+              <b>97,8%</b>
+              <span>Chamados atendidos</span>
+            </div>
+            <span class="chip"><i class="ph ph-arrow-up" aria-hidden="true"></i>Mês passado · 94%</span>
+          </article>
+
+          <div class="ops-row reveal" style="--d:5">
             <article class="figure">
-              <b data-count="2392">2392</b>
-              <span>Chamados</span>
+              <span class="icon-box is-dim"><i class="ph ph-ticket" aria-hidden="true"></i></span>
+              <div class="figure-copy">
+                <b data-count="2392">2392</b>
+                <span>Chamados</span>
+              </div>
             </article>
             <article class="figure">
-              <b data-count="2323">2323</b>
-              <span>Resolvidos</span>
+              <span class="icon-box"><i class="ph ph-checks" aria-hidden="true"></i></span>
+              <div class="figure-copy">
+                <b data-count="2323">2323</b>
+                <span>Resolvidos</span>
+              </div>
             </article>
             <article class="figure">
-              <b data-count="59">59</b>
-              <span>Em atendimento</span>
+              <span class="icon-box"><i class="ph ph-headset" aria-hidden="true"></i></span>
+              <div class="figure-copy">
+                <b data-count="59">59</b>
+                <span>Em atendimento</span>
+              </div>
             </article>
           </div>
         </div>
 
-        <footer class="value reveal" style="--d:5">
+        <footer class="value reveal" style="--d:6">
           <span class="label">Mensagem principal</span>
           <p>A maior parte da capacidade está sendo consumida pelos projetos, reduzindo o espaço disponível de sustentação.</p>
         </footer>
@@ -242,7 +298,7 @@
         <div class="pace">
           <article class="pace-col is-fast reveal" style="--d:3">
             <header>
-              <span class="label">Convertem rápido</span>
+              <span class="pace-kicker"><span class="icon-box"><i class="ph ph-lightning" aria-hidden="true"></i></span><span class="label">Convertem rápido</span></span>
               <strong>13 a 48 dias</strong>
             </header>
             <table class="table">
@@ -281,7 +337,7 @@
 
           <article class="pace-col is-slow reveal" style="--d:5">
             <header>
-              <span class="label">Longa permanência</span>
+              <span class="pace-kicker"><span class="icon-box is-gold"><i class="ph ph-hourglass" aria-hidden="true"></i></span><span class="label">Longa permanência</span></span>
               <strong>120 a 330 dias</strong>
             </header>
             <table class="table">
@@ -320,37 +376,54 @@
       </div>
     </section>
 
-    <!-- 05 · ORIZON E BI -->
-    <section class="slide" data-label="Orizon e BI">
+    <!-- 05 · ORIZON -->
+    <section class="slide" data-label="Orizon">
       <i class="ph ph-chart-pie-slice slide-bg-icon" aria-hidden="true"></i>
       <div class="slide-inner">
         <header class="slide-head">
           <div class="head-row reveal" style="--d:0">
-            <span class="kicker"><span class="kicker-num">05</span>Orizon e BI</span>
+            <span class="kicker"><span class="kicker-num">05</span>Orizon</span>
             <span class="head-tag">Longa permanência</span>
           </div>
-          <h2 class="slide-title reveal" style="--d:1">Dois projetos no <em>mesmo patamar.</em></h2>
+          <h2 class="slide-title reveal" style="--d:1">Orizon  módulo <em>Fature.</em></h2>
         </header>
 
         <div class="lead reveal" style="--d:2">
           <span class="label">Foco</span>
-          <p>Orizon e BI concentram as maiores permanências da carteira.</p>
+          <p>Orizon concentra uma das maiores permanências e divide faturamento e arquivos com a SPA.</p>
         </div>
 
-        <div class="board is-pair">
+        <div class="orizon-stage">
           <article class="figure reveal" style="--d:3">
-            <b data-count="330">330</b>
-            <span>Dias · Orizon · Prestadores</span>
+            <span class="icon-box"><i class="ph ph-hospital" aria-hidden="true"></i></span>
+            <div class="figure-copy">
+              <b data-count="330">330</b>
+              <span>Dias na carteira</span>
+            </div>
           </article>
-          <article class="figure reveal" style="--d:4">
-            <b data-count="329">329</b>
-            <span>Dias · BI</span>
-          </article>
+
+          <div class="split-share reveal" style="--d:4">
+            <header>
+              <span class="label">Até 21/10/2026</span>
+              <span>% Faturamento</span>
+              <span>% Arquivos recebidos</span>
+            </header>
+            <div class="split-row">
+              <span>Orizon</span>
+              <div><b>49,24%</b><i style="--w:49.24%"></i></div>
+              <div><b>43,94%</b><i style="--w:43.94%"></i></div>
+            </div>
+            <div class="split-row is-spa">
+              <span>SPA</span>
+              <div><b>50,76%</b><i style="--w:50.76%"></i></div>
+              <div><b>56,06%</b><i style="--w:56.06%"></i></div>
+            </div>
+          </div>
         </div>
 
         <footer class="value reveal" style="--d:5">
           <span class="label">Mensagem principal</span>
-          <p>Os dois projetos estão há quase o mesmo tempo na carteira e disputam a capacidade com as demais demandas.</p>
+          <p>Orizon permanece há 330 dias e divide o faturamento quase ao meio com a SPA, que concentra a maior parte dos arquivos recebidos.</p>
         </footer>
       </div>
     </section>
@@ -392,7 +465,7 @@
           </div>
 
           <article class="intake reveal" style="--d:6">
-            <span class="pillar-index">04</span>
+            <span class="icon-box is-gold"><i class="ph ph-funnel" aria-hidden="true"></i></span>
             <div>
               <h3>Controlar novas entradas</h3>
               <p>Sem controle de entrada, o backlog continuará crescendo enquanto a capacidade permanece limitada.</p>
@@ -419,44 +492,117 @@
           <p>Uma visão dos projetos por <strong>impacto</strong> e <strong>viabilidade de execução.</strong></p>
         </div>
 
-        <div class="stack">
-          <h3 class="section-label reveal" style="--d:3">Direcionamentos</h3>
-          <div class="lens reveal" style="--d:3">
+        <div class="direct-board reveal" style="--d:3">
+          <div class="lens">
             <span>Impacto</span>
             <i></i>
             <span>Viabilidade de execução</span>
           </div>
 
           <div class="direct">
-            <article class="reveal" style="--d:4">
-              <span class="pillar-index">01</span>
+            <article>
+              <span class="direct-index">01</span>
+              <span class="icon-box"><i class="ph ph-check-circle" aria-hidden="true"></i></span>
               <div>
+                <span class="direct-kicker">Alto impacto · Alta viabilidade</span>
                 <h3>Concluir</h3>
                 <p>Alto impacto e alta probabilidade de entrega dentro da janela.</p>
               </div>
             </article>
-            <article class="reveal" style="--d:5">
-              <span class="pillar-index">02</span>
+            <article>
+              <span class="direct-index">02</span>
+              <span class="icon-box"><i class="ph ph-lock-key-open" aria-hidden="true"></i></span>
               <div>
+                <span class="direct-kicker">Alto impacto · Depende de decisão</span>
                 <h3>Destravar</h3>
                 <p>Estratégicos que dependem de decisão, fornecedor, área ou recurso.</p>
               </div>
             </article>
-            <article class="reveal" style="--d:6">
-              <span class="pillar-index">03</span>
+            <article>
+              <span class="direct-index">03</span>
+              <span class="icon-box"><i class="ph ph-calendar-x" aria-hidden="true"></i></span>
               <div>
+                <span class="direct-kicker">Fora da janela</span>
                 <h3>Replanejar</h3>
                 <p>Sem capacidade ou condição de conclusão no período.</p>
               </div>
             </article>
-            <article class="reveal" style="--d:7">
-              <span class="pillar-index">04</span>
+            <article>
+              <span class="direct-index">04</span>
+              <span class="icon-box is-gold"><i class="ph ph-funnel" aria-hidden="true"></i></span>
               <div>
+                <span class="direct-kicker">Protege a capacidade</span>
                 <h3>Controlar novas entradas</h3>
                 <p>Sem controle de entrada, o backlog continua crescendo com a capacidade limitada.</p>
               </div>
             </article>
           </div>
+        </div>
+
+        <footer class="value reveal" style="--d:4">
+          <span class="label">Mensagem principal</span>
+          <p>Antes de 31/12, cada projeto entra em uma destas quatro leituras: concluir, destravar, replanejar ou controlar a entrada.</p>
+        </footer>
+      </div>
+    </section>
+
+    <!-- 08 · ENCERRAMENTO -->
+    <section class="slide slide-final" data-label="Compromisso">
+      <div class="slide-inner final">
+        <div class="final-badge reveal" style="--d:0">
+          <svg class="final-logo" aria-hidden="true"><use href="#logo" /></svg>
+        </div>
+
+        <span class="kicker reveal" style="--d:1"><span class="kicker-num">08</span>Compromisso com o Futuro</span>
+        <h2 class="slide-title reveal" style="--d:2">Sustentar o presente. Estruturar o futuro. <em>Gerar valor.</em></h2>
+
+        <article class="final-mission reveal" style="--d:3">
+          <span class="icon-box"><i class="ph ph-handshake" aria-hidden="true"></i></span>
+          <div>
+            <span class="mission-eyebrow">Nosso compromisso</span>
+            <p>Manter uma operação eficiente, estruturar projetos com governança e direcionar a evolução tecnológica às prioridades estratégicas do S.P.A. Saúde.</p>
+          </div>
+        </article>
+
+        <div class="final-actions reveal" style="--d:4">
+          <article class="final-action" style="--tone: var(--accent)">
+            <div class="final-action-top">
+              <span class="final-action-num">01</span>
+              <span class="icon-box"><i class="ph ph-arrows-clockwise" aria-hidden="true"></i></span>
+            </div>
+            <h3>Eficiência operacional</h3>
+            <p>Serviços estáveis, atendimento estruturado e proximidade contínua com as áreas.</p>
+          </article>
+          <article class="final-action" style="--tone: var(--gold)">
+            <div class="final-action-top">
+              <span class="final-action-num">02</span>
+              <span class="icon-box is-gold"><i class="ph ph-target" aria-hidden="true"></i></span>
+            </div>
+            <h3>Projetos com propósito</h3>
+            <p>Planejamento, integração e execução de iniciativas conectadas às necessidades do negócio.</p>
+          </article>
+          <article class="final-action" style="--tone: var(--accent-2)">
+            <div class="final-action-top">
+              <span class="final-action-num">03</span>
+              <span class="icon-box"><i class="ph ph-shield-star" aria-hidden="true"></i></span>
+            </div>
+            <h3>Evolução responsável</h3>
+            <p>Segurança da informação, governança de dados, inteligência artificial e melhoria contínua.</p>
+          </article>
+        </div>
+
+        <article class="final-rule reveal" style="--d:5">
+          <span class="icon-box icon-lg"><i class="ph ph-sparkle" aria-hidden="true"></i></span>
+          <div>
+            <h3>Tecnologia como capacidade estratégica</h3>
+            <p>Tecnologia não é apenas suporte. É uma capacidade estratégica para o crescimento, a eficiência e a sustentabilidade do S.P.A. Saúde.</p>
+          </div>
+        </article>
+
+        <div class="final-steps reveal" style="--d:6">
+          <span class="chip chip-lg"><i class="ph ph-check-circle" aria-hidden="true"></i>Sustentar a operação</span>
+          <span class="chip chip-lg"><i class="ph ph-git-merge" aria-hidden="true"></i>Estruturar a evolução</span>
+          <span class="chip chip-lg"><i class="ph ph-trend-up" aria-hidden="true"></i>Gerar valor real</span>
         </div>
       </div>
     </section>
@@ -466,7 +612,7 @@
   <nav class="dots" aria-label="Slides"></nav>
 
   <div class="counter" aria-live="polite">
-    <span data-counter-current>01</span><span class="counter-sep">/</span><span data-counter-total>08</span>
+    <span data-counter-current>01</span><span class="counter-sep">/</span><span data-counter-total>09</span>
   </div>
 
   <div class="controls">
@@ -497,7 +643,7 @@
     </div>
   </div>
 
-  <script src="js/main.js?v=25"></script>
+  <script src="js/main.js?v=29"></script>
 </body>
 
 </html>
