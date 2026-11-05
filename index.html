@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="fonts/inter/inter.css">
   <link rel="stylesheet" href="fonts/phosphor/regular.css">
   <link rel="stylesheet" href="fonts/phosphor/fill.css">
-  <link rel="stylesheet" href="css/style.css?v=70">
+  <link rel="stylesheet" href="css/style.css?v=80">
   <link rel="stylesheet" href="css/profile.css?v=3">
 </head>
 
@@ -72,45 +72,58 @@
         </header>
 
         <div class="status-stage reveal" style="--d:2">
-          <article class="figure is-hero">
-            <span class="icon-box icon-lg"><i class="ph-fill ph-folders" aria-hidden="true"></i></span>
-            <b data-count="23">23</b>
-            <span>Projetos concluídos</span>
+          <article class="growth-kpi status-growth">
+            <span class="label">Projetos concluídos</span>
+
+            <div class="growth-compare">
+              <div class="growth-from">
+                <span class="growth-num-sm">17</span>
+                <span class="growth-cap">Base anterior</span>
+              </div>
+              <i class="ph ph-arrow-right growth-arrow"></i>
+              <div class="growth-to">
+                <span class="growth-num" data-count="24">24</span>
+                <span class="growth-cap">Atual</span>
+              </div>
+            </div>
+
+            <div class="growth-bars" aria-hidden="true">
+              <div class="growth-bar"><i style="--w:0.71"></i><span>17</span></div>
+              <div class="growth-bar is-now"><i style="--w:1"></i><span>24</span></div>
+            </div>
+
+            <div class="growth-badge">
+              <span class="growth-pct"><i class="ph ph-trend-up"></i><span>+7</span></span>
+              <span class="growth-note">projetos concluídos a mais</span>
+            </div>
           </article>
 
           <div class="board board-support">
             <article class="figure is-quiet">
               <span class="icon-box is-dim"><i class="ph ph-ticket" aria-hidden="true"></i></span>
               <div class="figure-copy">
-                <b data-count="2392">2392</b>
+                <b data-count="2498">2498</b>
                 <span>Chamados</span>
               </div>
             </article>
             <article class="figure">
               <span class="icon-box"><i class="ph ph-checks" aria-hidden="true"></i></span>
               <div class="figure-copy">
-                <b data-count="2323">2323</b>
+                <b data-count="2427">2427</b>
                 <span>Resolvidos</span>
-              </div>
-            </article>
-            <article class="figure">
-              <span class="icon-box"><i class="ph ph-headset" aria-hidden="true"></i></span>
-              <div class="figure-copy">
-                <b data-count="59">59</b>
-                <span>Em atendimento</span>
               </div>
             </article>
             <article class="figure">
               <span class="icon-box"><i class="ph ph-calendar-blank" aria-hidden="true"></i></span>
               <div class="figure-copy">
-                <b data-count="47">47</b>
+                <b data-count="38">38</b>
                 <span>Dias até 31/12</span>
               </div>
             </article>
             <article class="figure">
               <span class="icon-box"><i class="ph ph-gauge" aria-hidden="true"></i></span>
               <div class="figure-copy">
-                <b data-count="40" data-suffix="%">40%</b>
+                <b data-count="33" data-suffix="%">33%</b>
                 <span>Capacidade em sustentação</span>
               </div>
             </article>
@@ -204,41 +217,36 @@
       </div>
     </section>
 
-    <!-- 03 · PROBLEMA -->
-    <section class="slide" data-label="Problema">
+    <!-- 03 · SUSTENTAÇÃO -->
+    <section class="slide" data-label="Sustentação">
       <i class="ph ph-gauge slide-bg-icon" aria-hidden="true"></i>
       <div class="slide-inner">
         <header class="slide-head">
           <div class="head-row reveal" style="--d:0">
-            <span class="kicker"><span class="kicker-num">03</span>O problema</span>
+            <span class="kicker"><span class="kicker-num">03</span>Sustentação</span>
           </div>
-          <h2 class="slide-title reveal" style="--d:1">Onde está o <em>problema?</em></h2>
+          <h2 class="slide-title reveal" style="--d:1">Projetos competem com a capacidade de <em>sustentação.</em></h2>
         </header>
 
-        <div class="lead reveal" style="--d:2">
-          <span class="label">Capacidade</span>
-          <p>Onde está o problema?</p>
-        </div>
-
         <div class="stack">
-          <div class="capacity reveal" style="--d:3">
+          <div class="capacity reveal" style="--d:2">
             <div class="capacity-split">
               <article class="is-ops">
-                <strong data-count="40" data-suffix="%">40%</strong>
+                <strong data-count="33" data-suffix="%">33%</strong>
                 <span>Sustentação</span>
               </article>
               <article class="is-run">
-                <strong data-count="60" data-suffix="%">60%</strong>
+                <strong data-count="67" data-suffix="%">67%</strong>
                 <span>Projetos</span>
               </article>
             </div>
             <div class="capacity-bar" aria-hidden="true">
-              <i class="is-ops" style="--w:40%"></i>
-              <i class="is-run" style="--w:60%"></i>
+              <i class="is-ops" style="--w:33%"></i>
+              <i class="is-run" style="--w:67%"></i>
             </div>
           </div>
 
-          <article class="served reveal" style="--d:4">
+          <article class="served reveal" style="--d:3">
             <span class="icon-box icon-lg"><i class="ph-fill ph-checks" aria-hidden="true"></i></span>
             <div class="served-main">
               <b>97,8%</b>
@@ -247,142 +255,33 @@
             <span class="chip"><i class="ph ph-arrow-up" aria-hidden="true"></i>Mês passado · 94%</span>
           </article>
 
-          <div class="ops-row reveal" style="--d:5">
+          <div class="ops-row is-pair reveal" style="--d:4">
             <article class="figure">
               <span class="icon-box is-dim"><i class="ph ph-ticket" aria-hidden="true"></i></span>
               <div class="figure-copy">
-                <b data-count="2392">2392</b>
+                <b data-count="2498">2498</b>
                 <span>Chamados</span>
               </div>
             </article>
             <article class="figure">
               <span class="icon-box"><i class="ph ph-checks" aria-hidden="true"></i></span>
               <div class="figure-copy">
-                <b data-count="2323">2323</b>
+                <b data-count="2427">2427</b>
                 <span>Resolvidos</span>
               </div>
             </article>
-            <article class="figure">
-              <span class="icon-box"><i class="ph ph-headset" aria-hidden="true"></i></span>
-              <div class="figure-copy">
-                <b data-count="59">59</b>
-                <span>Em atendimento</span>
-              </div>
-            </article>
           </div>
         </div>
-
-        <footer class="value reveal" style="--d:6">
-          <span class="label">Mensagem principal</span>
-          <p>A maior parte da capacidade está sendo consumida pelos projetos, reduzindo o espaço disponível de sustentação.</p>
-        </footer>
       </div>
     </section>
 
-    <!-- 04 · RESTRIÇÃO -->
-    <section class="slide" data-label="Restrição">
-      <i class="ph ph-hourglass slide-bg-icon" aria-hidden="true"></i>
-      <div class="slide-inner">
-        <header class="slide-head">
-          <div class="head-row reveal" style="--d:0">
-            <span class="kicker"><span class="kicker-num">04</span>A restrição</span>
-          </div>
-          <h2 class="slide-title reveal" style="--d:1">Qual é o impacto <em>dessa situação?</em></h2>
-        </header>
-
-        <div class="lead reveal" style="--d:2">
-          <span class="label">O efeito da restrição</span>
-          <p>Com foco, a conversão é rápida. Sem capacidade dedicada, a permanência se estende.</p>
-        </div>
-
-        <div class="pace">
-          <article class="pace-col is-fast reveal" style="--d:3">
-            <header>
-              <span class="pace-kicker"><span class="icon-box"><i class="ph ph-lightning" aria-hidden="true"></i></span><span class="label">Convertem rápido</span></span>
-              <strong>13 a 48 dias</strong>
-            </header>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Projeto</th>
-                  <th>Duração</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Atendimento domiciliar</td>
-                  <td>13 dias</td>
-                </tr>
-                <tr>
-                  <td>Carta de débito e crédito</td>
-                  <td>22 dias</td>
-                </tr>
-                <tr>
-                  <td>Consulta de enfermagem</td>
-                  <td>23 dias</td>
-                </tr>
-                <tr>
-                  <td>MPM Salesforce</td>
-                  <td>48 dias</td>
-                </tr>
-              </tbody>
-            </table>
-          </article>
-
-          <div class="pace-vs reveal" style="--d:4">
-            <span>até</span>
-            <strong>25×</strong>
-            <span>mais tempo</span>
-          </div>
-
-          <article class="pace-col is-slow reveal" style="--d:5">
-            <header>
-              <span class="pace-kicker"><span class="icon-box is-gold"><i class="ph ph-hourglass" aria-hidden="true"></i></span><span class="label">Longa permanência</span></span>
-              <strong>120 a 330 dias</strong>
-            </header>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Projeto</th>
-                  <th>Duração</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Orizon</td>
-                  <td>330 dias</td>
-                </tr>
-                <tr>
-                  <td>Pesquisa de satisfação - IDSS 2027</td>
-                  <td>330 dias</td>
-                </tr>
-                <tr>
-                  <td>DIOPS</td>
-                  <td>120 dias</td>
-                </tr>
-                <tr>
-                  <td>Benner</td>
-                  <td>—</td>
-                </tr>
-              </tbody>
-            </table>
-          </article>
-        </div>
-
-        <footer class="value reveal" style="--d:6">
-          <span class="label">Mensagem principal</span>
-          <p>Quando existe foco e capacidade, há conversão rápida. O principal desafio está na permanência e na capacidade disputada por múltiplas demandas.</p>
-        </footer>
-      </div>
-    </section>
-
-    <!-- 05 · ORIZON -->
+    <!-- 04 · ORIZON -->
     <section class="slide" data-label="Orizon">
       <i class="ph ph-chart-pie-slice slide-bg-icon" aria-hidden="true"></i>
       <div class="slide-inner">
         <header class="slide-head">
           <div class="head-row reveal" style="--d:0">
-            <span class="kicker"><span class="kicker-num">05</span>Orizon</span>
+            <span class="kicker"><span class="kicker-num">04</span>Orizon</span>
             <span class="head-tag">Longa permanência</span>
           </div>
           <h2 class="slide-title reveal" style="--d:1">Orizon  módulo <em>Fature.</em></h2>
@@ -394,55 +293,47 @@
         </div>
 
         <div class="orizon-stage">
-          <article class="figure reveal" style="--d:3">
-            <span class="icon-box"><i class="ph ph-hospital" aria-hidden="true"></i></span>
-            <div class="figure-copy">
-              <b data-count="330">330</b>
-              <span>Dias na carteira</span>
-            </div>
-          </article>
-
-          <div class="split-share reveal" style="--d:4">
+          <div class="split-share reveal" style="--d:3">
             <header>
-              <span class="label">Até 21/10/2026</span>
+              <span class="label">Até 31/10/2026</span>
               <span>% Faturamento</span>
               <span>% Arquivos recebidos</span>
             </header>
             <div class="split-row">
               <span>Orizon</span>
-              <div><b>49,24%</b><i style="--w:49.24%"></i></div>
-              <div><b>43,94%</b><i style="--w:43.94%"></i></div>
+              <div><b>52,03%</b><i style="--w:52.03%"></i></div>
+              <div><b>45,09%</b><i style="--w:45.09%"></i></div>
             </div>
             <div class="split-row is-spa">
               <span>SPA</span>
-              <div><b>50,76%</b><i style="--w:50.76%"></i></div>
-              <div><b>56,06%</b><i style="--w:56.06%"></i></div>
+              <div><b>47,97%</b><i style="--w:47.97%"></i></div>
+              <div><b>54,91%</b><i style="--w:54.91%"></i></div>
             </div>
           </div>
         </div>
 
-        <footer class="value reveal" style="--d:5">
+        <footer class="value reveal" style="--d:4">
           <span class="label">Mensagem principal</span>
-          <p>Orizon permanece há 330 dias e divide o faturamento quase ao meio com a SPA, que concentra a maior parte dos arquivos recebidos.</p>
+          <p>Até 31/10, a Orizon lidera o faturamento (52,03%) e a SPA concentra a maior parte dos arquivos recebidos (54,91%).</p>
         </footer>
       </div>
     </section>
 
-    <!-- 06 · PLANO -->
+    <!-- 05 · PLANO -->
     <section class="slide" data-label="Plano">
       <i class="ph ph-target slide-bg-icon" aria-hidden="true"></i>
       <div class="slide-inner">
         <header class="slide-head">
           <div class="head-row reveal" style="--d:0">
-            <span class="kicker"><span class="kicker-num">06</span>Plano de ação</span>
-            <span class="head-tag">47 dias · Janela de execução</span>
+            <span class="kicker"><span class="kicker-num">05</span>Plano de ação</span>
+            <span class="head-tag">38 dias · Janela de execução</span>
           </div>
           <h2 class="slide-title reveal" style="--d:1">O que precisamos <em>fazer agora?</em></h2>
         </header>
 
         <div class="lead reveal" style="--d:2">
           <span class="label">Então, o que fazer?</span>
-          <p><strong>47 dias</strong> de janela de execução até 31/12.</p>
+          <p><strong>38 dias</strong> de janela de execução até 31/12.</p>
         </div>
 
         <div class="actions">
@@ -481,8 +372,8 @@
       <div class="slide-inner">
         <header class="slide-head">
           <div class="head-row reveal" style="--d:0">
-            <span class="kicker"><span class="kicker-num">07</span>Impacto e viabilidade</span>
-            <span class="head-tag">47 dias até 31/12</span>
+            <span class="kicker"><span class="kicker-num">06</span>Impacto e viabilidade</span>
+            <span class="head-tag">38 dias até 31/12</span>
           </div>
           <h2 class="slide-title reveal" style="--d:1">Próximo <em>passo.</em></h2>
         </header>
@@ -546,14 +437,14 @@
       </div>
     </section>
 
-    <!-- 08 · ENCERRAMENTO -->
+    <!-- 07 · ENCERRAMENTO -->
     <section class="slide slide-final" data-label="Compromisso">
       <div class="slide-inner final">
         <div class="final-badge reveal" style="--d:0">
           <svg class="final-logo" aria-hidden="true"><use href="#logo" /></svg>
         </div>
 
-        <span class="kicker reveal" style="--d:1"><span class="kicker-num">08</span>Compromisso com o Futuro</span>
+        <span class="kicker reveal" style="--d:1"><span class="kicker-num">07</span>Compromisso com o Futuro</span>
         <h2 class="slide-title reveal" style="--d:2">Sustentar o presente. Estruturar o futuro. <em>Gerar valor.</em></h2>
 
         <article class="final-mission reveal" style="--d:3">
@@ -643,7 +534,7 @@
     </div>
   </div>
 
-  <script src="js/main.js?v=29"></script>
+  <script src="js/main.js?v=31"></script>
 </body>
 
 </html>

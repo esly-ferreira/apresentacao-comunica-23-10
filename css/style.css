@@ -37,7 +37,7 @@
   --accent-glow: rgba(123, 211, 122, 0.35);
   --warn: #f5b841;
   --alert: #ff7a66;
-  --gold: #DCAC6C;
+  --gold: #dcac6c;
   --gold-soft: rgba(220, 172, 108, 0.16);
 
   /* Paleta do cronograma: tons claros, na mesma luz do verde da marca */
@@ -63,7 +63,9 @@
   --radius: 0.9rem;
   --label-col: 12rem;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
 }
 
 * {
@@ -123,8 +125,20 @@ ol {
   overflow: hidden;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 85% 65% at 82% 10%, rgba(60, 105, 59, 0.22) 0%, rgba(60, 105, 59, 0.1) 42%, rgba(60, 105, 59, 0.03) 70%, transparent 100%),
-    radial-gradient(ellipse 75% 65% at 6% 94%, rgba(33, 71, 32, 0.3) 0%, rgba(33, 71, 32, 0.14) 45%, rgba(33, 71, 32, 0.03) 75%, transparent 100%),
+    radial-gradient(
+      ellipse 85% 65% at 82% 10%,
+      rgba(60, 105, 59, 0.22) 0%,
+      rgba(60, 105, 59, 0.1) 42%,
+      rgba(60, 105, 59, 0.03) 70%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 75% 65% at 6% 94%,
+      rgba(33, 71, 32, 0.3) 0%,
+      rgba(33, 71, 32, 0.14) 45%,
+      rgba(33, 71, 32, 0.03) 75%,
+      transparent 100%
+    ),
     linear-gradient(180deg, #061208 0%, #040b05 100%);
 }
 
@@ -136,7 +150,11 @@ ol {
     linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
   background-size: 4rem 4rem;
-  -webkit-mask-image: radial-gradient(ellipse at 50% 45%, #000 15%, transparent 70%);
+  -webkit-mask-image: radial-gradient(
+    ellipse at 50% 45%,
+    #000 15%,
+    transparent 70%
+  );
   mask-image: radial-gradient(ellipse at 50% 45%, #000 15%, transparent 70%);
 }
 
@@ -145,7 +163,11 @@ ol {
   width: 70vmax;
   height: 70vmax;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(95, 191, 106, 0.14), transparent 62%);
+  background: radial-gradient(
+    circle,
+    rgba(95, 191, 106, 0.14),
+    transparent 62%
+  );
   will-change: transform;
   transition: opacity 1s ease;
 }
@@ -174,7 +196,6 @@ ol {
     transform: translate3d(14vmax, -8vmax, 0);
   }
 }
-
 
 /* ================= Chrome (progresso, topo, navegação) ================= */
 .progress {
@@ -259,7 +280,9 @@ ol {
   border: none;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.2);
-  transition: height 0.4s var(--ease), background-color 0.3s ease;
+  transition:
+    height 0.4s var(--ease),
+    background-color 0.3s ease;
 }
 
 .dot:hover {
@@ -287,7 +310,9 @@ ol {
   white-space: nowrap;
   opacity: 0;
   transform: translate(0.4rem, -50%);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
   pointer-events: none;
 }
 
@@ -339,7 +364,10 @@ ol {
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.03);
   font-size: 1.1rem;
-  transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
 .ctrl:hover {
@@ -484,7 +512,7 @@ body:not(.on-cover) .hint {
 }
 
 /* Título e missão no topo, conteúdo no centro, rodapé sempre na mesma faixa */
-.slide-inner:not(.final)> :not(.slide-head):not(.lead):not(.value) {
+.slide-inner:not(.final) > :not(.slide-head):not(.lead):not(.value) {
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -493,7 +521,9 @@ body:not(.on-cover) .hint {
 .reveal {
   opacity: 0;
   transform: translate3d(0, 1.5rem, 0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .slide.is-active .reveal {
@@ -552,9 +582,13 @@ body:not(.on-cover) .hint {
 
 .slide-title {
   font-size: calc(3.5rem * var(--t));
-  font-weight: 300;
-  letter-spacing: -0.035em;
-  line-height: 1.05;
+  font-weight: 720;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+  font-variation-settings:
+    "opsz" 32,
+    "wght" 720;
+  color: #f4faf3;
 }
 
 .slide-title em,
@@ -568,7 +602,13 @@ body:not(.on-cover) .hint {
   letter-spacing: -0.04em;
   /* o itálico avança além da caixa; sem folga o gradiente corta a última letra */
   padding-right: 0.08em;
-  background: linear-gradient(135deg, #ffffff 0%, #d8f5c8 32%, var(--accent) 70%, #67be6c 100%);
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #d8f5c8 32%,
+    var(--accent) 70%,
+    #67be6c 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -877,7 +917,11 @@ body:not(.on-cover) .hint {
   border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   background:
-    radial-gradient(ellipse 90% 70% at 15% 100%, rgba(95, 191, 106, 0.22), transparent 70%),
+    radial-gradient(
+      ellipse 90% 70% at 15% 100%,
+      rgba(95, 191, 106, 0.22),
+      transparent 70%
+    ),
     var(--surface);
 }
 
@@ -1012,7 +1056,7 @@ body:not(.on-cover) .hint {
   font-weight: 600;
 }
 
-.list li>span:last-child:not(.list-n) {
+.list li > span:last-child:not(.list-n) {
   font-size: calc(0.95rem * var(--t));
   color: var(--muted);
 }
@@ -1130,7 +1174,11 @@ body:not(.on-cover) .hint {
 
 .cell.is-featured {
   background:
-    radial-gradient(ellipse 120% 100% at 0% 0%, rgba(95, 191, 106, 0.16), transparent 60%),
+    radial-gradient(
+      ellipse 120% 100% at 0% 0%,
+      rgba(95, 191, 106, 0.16),
+      transparent 60%
+    ),
     var(--surface);
 }
 
@@ -1165,7 +1213,11 @@ body:not(.on-cover) .hint {
   border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   background:
-    radial-gradient(ellipse 90% 70% at 15% 100%, rgba(95, 191, 106, 0.22), transparent 70%),
+    radial-gradient(
+      ellipse 90% 70% at 15% 100%,
+      rgba(95, 191, 106, 0.22),
+      transparent 70%
+    ),
     var(--surface);
 }
 
@@ -1328,7 +1380,10 @@ button.figure:focus-visible {
   height: 100%;
   border-radius: inherit;
   background: rgba(255, 255, 255, 0.22);
-  transition: width 0.9s var(--ease), background 0.45s ease, box-shadow 0.45s ease;
+  transition:
+    width 0.9s var(--ease),
+    background 0.45s ease,
+    box-shadow 0.45s ease;
 }
 
 .figure.is-now .rise-meter i {
@@ -1339,7 +1394,11 @@ button.figure:focus-visible {
 
 .figure.is-now {
   background:
-    radial-gradient(ellipse 90% 80% at 0% 100%, rgba(95, 191, 106, 0.28), transparent 68%),
+    radial-gradient(
+      ellipse 90% 80% at 0% 100%,
+      rgba(95, 191, 106, 0.28),
+      transparent 68%
+    ),
     var(--surface);
   box-shadow: inset 0 0 0 1px var(--line-strong);
 }
@@ -1361,7 +1420,6 @@ button.figure:focus-visible {
 }
 
 @keyframes nudge {
-
   0%,
   60%,
   100% {
@@ -1445,7 +1503,6 @@ button.figure:focus-visible {
 }
 
 @keyframes glow {
-
   0%,
   100% {
     box-shadow: 0 0 0 0 rgba(155, 226, 154, 0.45);
@@ -1518,7 +1575,11 @@ button.figure:focus-visible {
 }
 
 .lg-new {
-  background: repeating-linear-gradient(-45deg, rgba(238, 245, 238, 0.9) 0 0.15rem, rgba(238, 245, 238, 0.28) 0.15rem 0.3rem);
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(238, 245, 238, 0.9) 0 0.15rem,
+    rgba(238, 245, 238, 0.28) 0.15rem 0.3rem
+  );
 }
 
 .gantt-grid {
@@ -1558,15 +1619,42 @@ button.figure:focus-visible {
   height: 2.05rem;
 }
 
-.g-row:nth-child(1) { --bar: var(--chart-sky); --bar-deep: var(--chart-sky-deep); }
-.g-row:nth-child(2) { --bar: var(--chart-teal); --bar-deep: var(--chart-teal-deep); }
-.g-row:nth-child(3) { --bar: var(--chart-green); --bar-deep: var(--chart-green-deep); }
-.g-row:nth-child(4) { --bar: var(--chart-gold); --bar-deep: var(--chart-gold-deep); }
-.g-row:nth-child(5) { --bar: var(--chart-violet); --bar-deep: var(--chart-violet-deep); }
-.g-row:nth-child(6) { --bar: var(--chart-amber); --bar-deep: var(--chart-amber-deep); }
-.g-row:nth-child(7) { --bar: var(--chart-coral); --bar-deep: var(--chart-coral-deep); }
-.g-row:nth-child(8) { --bar: var(--chart-rose); --bar-deep: var(--chart-rose-deep); }
-.g-row:nth-child(9) { --bar: var(--chart-lime); --bar-deep: var(--chart-lime-deep); }
+.g-row:nth-child(1) {
+  --bar: var(--chart-sky);
+  --bar-deep: var(--chart-sky-deep);
+}
+.g-row:nth-child(2) {
+  --bar: var(--chart-teal);
+  --bar-deep: var(--chart-teal-deep);
+}
+.g-row:nth-child(3) {
+  --bar: var(--chart-green);
+  --bar-deep: var(--chart-green-deep);
+}
+.g-row:nth-child(4) {
+  --bar: var(--chart-gold);
+  --bar-deep: var(--chart-gold-deep);
+}
+.g-row:nth-child(5) {
+  --bar: var(--chart-violet);
+  --bar-deep: var(--chart-violet-deep);
+}
+.g-row:nth-child(6) {
+  --bar: var(--chart-amber);
+  --bar-deep: var(--chart-amber-deep);
+}
+.g-row:nth-child(7) {
+  --bar: var(--chart-coral);
+  --bar-deep: var(--chart-coral-deep);
+}
+.g-row:nth-child(8) {
+  --bar: var(--chart-rose);
+  --bar-deep: var(--chart-rose-deep);
+}
+.g-row:nth-child(9) {
+  --bar: var(--chart-lime);
+  --bar-deep: var(--chart-lime-deep);
+}
 
 .g-id {
   display: -webkit-box;
@@ -1585,7 +1673,11 @@ button.figure:focus-visible {
 .g-track {
   position: relative;
   height: 100%;
-  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.04) 1px,
+    transparent 1px
+  );
   background-size: calc(100% / 12) 100%;
 }
 
@@ -1630,9 +1722,11 @@ button.figure:focus-visible {
 }
 
 .g-bar.new {
-  background: repeating-linear-gradient(-45deg,
-      color-mix(in srgb, var(--bar) 78%, white) 0 0.35rem,
-      color-mix(in srgb, var(--bar) 28%, transparent) 0.35rem 0.7rem);
+  background: repeating-linear-gradient(
+    -45deg,
+    color-mix(in srgb, var(--bar) 78%, white) 0 0.35rem,
+    color-mix(in srgb, var(--bar) 28%, transparent) 0.35rem 0.7rem
+  );
   box-shadow: 0 0 14px -2px color-mix(in srgb, var(--bar) 55%, transparent);
 }
 
@@ -1889,7 +1983,11 @@ button.figure:focus-visible {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background:
-    radial-gradient(ellipse 80% 60% at 50% 35%, rgba(95, 191, 106, 0.16), transparent 70%),
+    radial-gradient(
+      ellipse 80% 60% at 50% 35%,
+      rgba(95, 191, 106, 0.16),
+      transparent 70%
+    ),
     linear-gradient(180deg, #0c1b0e 0%, #060f07 100%);
 }
 
@@ -1910,7 +2008,9 @@ button.figure:focus-visible {
   object-fit: cover;
   object-position: center;
   filter: grayscale(1) contrast(1.05) brightness(0.95);
-  transition: filter 0.6s var(--ease), transform 0.8s var(--ease);
+  transition:
+    filter 0.6s var(--ease),
+    transform 0.8s var(--ease);
 }
 
 .person.reveal .photo img {
@@ -1924,7 +2024,11 @@ button.figure:focus-visible {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, transparent 78%, rgba(4, 11, 5, 0.35) 100%);
+  background: linear-gradient(
+    180deg,
+    transparent 78%,
+    rgba(4, 11, 5, 0.35) 100%
+  );
 }
 
 .person:hover .photo img {
@@ -1983,7 +2087,9 @@ button.figure:focus-visible {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28);
   opacity: 0;
   transform: translate3d(0, 1.5rem, 0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .slide.is-active .tier-shape {
@@ -2007,17 +2113,30 @@ button.figure:focus-visible {
 }
 
 .tier-1 .tier-shape {
-  background: linear-gradient(180deg, #d6f8d2 0%, var(--accent) 45%, var(--accent-2) 100%);
+  background: linear-gradient(
+    180deg,
+    #d6f8d2 0%,
+    var(--accent) 45%,
+    var(--accent-2) 100%
+  );
   color: #062008;
 }
 
 .tier-2 .tier-shape {
-  background: linear-gradient(180deg, var(--color-brand-300) 0%, var(--color-brand-500) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--color-brand-300) 0%,
+    var(--color-brand-500) 100%
+  );
   color: #f2fbf1;
 }
 
 .tier-3 .tier-shape {
-  background: linear-gradient(180deg, var(--color-brand-600) 0%, var(--color-brand-800) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--color-brand-600) 0%,
+    var(--color-brand-800) 100%
+  );
   color: var(--text);
 }
 
@@ -2030,7 +2149,11 @@ button.figure:focus-visible {
   width: 16rem;
   height: 12rem;
   border-radius: 50%;
-  background: radial-gradient(closest-side, rgba(155, 226, 154, 0.35), transparent);
+  background: radial-gradient(
+    closest-side,
+    rgba(155, 226, 154, 0.35),
+    transparent
+  );
   transform: translateX(-50%);
   pointer-events: none;
   opacity: 0;
@@ -2041,7 +2164,6 @@ button.figure:focus-visible {
 }
 
 @keyframes breathe {
-
   0%,
   100% {
     opacity: 0.35;
@@ -2073,7 +2195,11 @@ button.figure:focus-visible {
   left: calc(var(--pw) * var(--edge) + 1rem);
   width: calc(var(--pw) * (1 - var(--edge)) + 2rem);
   height: 1px;
-  background: repeating-linear-gradient(90deg, var(--line-strong) 0 0.35rem, transparent 0.35rem 0.7rem);
+  background: repeating-linear-gradient(
+    90deg,
+    var(--line-strong) 0 0.35rem,
+    transparent 0.35rem 0.7rem
+  );
   transform: scaleX(0);
   transform-origin: left;
 }
@@ -2101,7 +2227,9 @@ button.figure:focus-visible {
   gap: 0.35rem;
   opacity: 0;
   transform: translate3d(1rem, 0, 0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .slide.is-active .tier-info {
@@ -2188,7 +2316,9 @@ button.figure:focus-visible {
   inset: 0 -8% 0 16%;
   z-index: 1;
   opacity: 0;
-  transition: opacity 1.4s ease, transform 1.1s var(--ease);
+  transition:
+    opacity 1.4s ease,
+    transform 1.1s var(--ease);
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 12%);
   mask-image: linear-gradient(90deg, transparent 0%, #000 12%);
 }
@@ -2196,7 +2326,9 @@ button.figure:focus-visible {
 .slide-cover:not(.is-active) .cover-3d {
   opacity: 0;
   transform: translate3d(2.5rem, -1.75rem, 0);
-  transition: opacity 0.9s var(--ease), transform 1s var(--ease);
+  transition:
+    opacity 0.9s var(--ease),
+    transform 1s var(--ease);
 }
 
 .cover-3d.is-ready {
@@ -2215,10 +2347,12 @@ button.figure:focus-visible {
   z-index: 1;
   pointer-events: none;
   transition: opacity 0.7s var(--ease);
-  background: linear-gradient(90deg,
+  background: linear-gradient(
+    90deg,
     rgba(4, 11, 5, 0.42) 0%,
     rgba(4, 11, 5, 0.1) 16%,
-    transparent 28%);
+    transparent 28%
+  );
 }
 
 .cover-top,
@@ -2306,7 +2440,9 @@ button.figure:focus-visible {
   font-weight: 720;
   line-height: 0.78;
   letter-spacing: -0.06em;
-  font-variation-settings: "opsz" 32, "wght" 720;
+  font-variation-settings:
+    "opsz" 32,
+    "wght" 720;
   color: #f4faf3;
 }
 
@@ -2354,7 +2490,9 @@ button.figure:focus-visible {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   pointer-events: auto;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .cover-start:hover {
@@ -2411,7 +2549,7 @@ button.figure:focus-visible {
   vector-effect: non-scaling-stroke;
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
-  pathLength: 1;
+  pathlength: 1;
   opacity: 0.75;
 }
 
@@ -2437,7 +2575,11 @@ button.figure:focus-visible {
   transform: translate(-50%, -50%);
   border: 1px solid rgba(220, 172, 108, 0.5);
   background:
-    radial-gradient(circle at 50% 35%, rgba(220, 172, 108, 0.2), transparent 62%),
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(220, 172, 108, 0.2),
+      transparent 62%
+    ),
     var(--bg);
   box-shadow: 0 0 0 0.55rem var(--bg);
   line-height: 1;
@@ -2447,7 +2589,12 @@ button.figure:focus-visible {
   font-size: calc(2.2rem * var(--t));
   font-weight: 700;
   letter-spacing: 0.02em;
-  background: linear-gradient(135deg, #ffffff 10%, #d8f5c8 42%, var(--accent) 100%);
+  background: linear-gradient(
+    135deg,
+    #ffffff 10%,
+    #d8f5c8 42%,
+    var(--accent) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -2544,7 +2691,11 @@ button.figure:focus-visible {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(ellipse 55% 50% at 50% 30%, rgba(95, 191, 106, 0.18), transparent 70%);
+  background: radial-gradient(
+    ellipse 55% 50% at 50% 30%,
+    rgba(95, 191, 106, 0.18),
+    transparent 70%
+  );
 }
 
 .final {
@@ -2575,7 +2726,11 @@ button.figure:focus-visible {
 .final-mission {
   padding: 0.95rem 1.2rem;
   border-left: 3px solid var(--accent);
-  background: linear-gradient(90deg, rgba(95, 191, 106, 0.1), var(--surface) 58%);
+  background: linear-gradient(
+    90deg,
+    rgba(95, 191, 106, 0.1),
+    var(--surface) 58%
+  );
 }
 
 .final-mission .mission-eyebrow {
@@ -2645,7 +2800,11 @@ button.figure:focus-visible {
 .final-rule {
   padding: 0.85rem 1.15rem;
   border-color: rgba(155, 226, 154, 0.28);
-  background: linear-gradient(90deg, var(--color-brand-800), var(--color-brand-950));
+  background: linear-gradient(
+    90deg,
+    var(--color-brand-800),
+    var(--color-brand-950)
+  );
 }
 
 .final-rule p {
@@ -2674,7 +2833,11 @@ button.figure:focus-visible {
   place-items: center;
   border-radius: 50%;
   border: 1px solid var(--line-strong);
-  background: radial-gradient(circle at 50% 35%, var(--color-brand-500), var(--color-brand-900));
+  background: radial-gradient(
+    circle at 50% 35%,
+    var(--color-brand-500),
+    var(--color-brand-900)
+  );
   box-shadow: 0 0 60px -5px var(--accent-glow);
   margin-bottom: 0.5rem;
 }
@@ -2794,20 +2957,16 @@ button.figure:focus-visible {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.ops-row.is-pair,
 .board.is-pair {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .orizon-stage {
   display: grid;
-  grid-template-columns: 16.5rem minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
   align-items: stretch;
-}
-
-.orizon-stage .figure {
-  min-height: 0;
-  justify-content: space-between;
 }
 
 .split-share {
@@ -2895,7 +3054,11 @@ button.figure:focus-visible {
   min-height: 10.5rem;
   padding: 1.25rem 1.5rem 1.35rem;
   background:
-    radial-gradient(ellipse 80% 70% at 0% 100%, rgba(95, 191, 106, 0.12), transparent 70%),
+    radial-gradient(
+      ellipse 80% 70% at 0% 100%,
+      rgba(95, 191, 106, 0.12),
+      transparent 70%
+    ),
     var(--surface);
 }
 
@@ -2954,7 +3117,12 @@ button.figure:focus-visible {
   left: 14%;
   right: 14%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.22),
+    transparent
+  );
   pointer-events: none;
 }
 
@@ -3042,7 +3210,11 @@ button.figure:focus-visible {
   border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   background:
-    radial-gradient(ellipse 42% 140% at 0% 50%, rgba(95, 191, 106, 0.18), transparent 68%),
+    radial-gradient(
+      ellipse 42% 140% at 0% 50%,
+      rgba(95, 191, 106, 0.18),
+      transparent 68%
+    ),
     var(--surface);
 }
 
@@ -3094,53 +3266,28 @@ button.figure:focus-visible {
   width: 100%;
 }
 
-.status-stage .is-hero {
-  position: relative;
-  width: min(100%, 36rem);
-  min-height: 14.5rem;
-  align-items: center;
-  justify-content: center;
-  gap: 0.15rem;
-  text-align: center;
-  overflow: hidden;
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius);
+.status-stage .status-growth {
+  width: 100%;
   background:
-    radial-gradient(ellipse 90% 80% at 50% 115%, rgba(95, 191, 106, 0.34), transparent 62%),
-    radial-gradient(ellipse 50% 40% at 50% 0%, rgba(155, 226, 154, 0.1), transparent 70%),
+    radial-gradient(
+      ellipse 90% 80% at 50% 115%,
+      rgba(95, 191, 106, 0.34),
+      transparent 62%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 50% 0%,
+      rgba(155, 226, 154, 0.1),
+      transparent 70%
+    ),
     var(--surface);
-  box-shadow: 0 0 0 1px rgba(155, 226, 154, 0.06), 0 1.2rem 3.2rem rgba(95, 191, 106, 0.14);
-}
-
-.status-stage .is-hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
-}
-
-.status-stage .is-hero .icon-box {
-  margin-bottom: 0.35rem;
-  letter-spacing: 0;
-  color: var(--accent);
-}
-
-.status-stage .is-hero b {
-  font-size: calc(6.6rem * var(--t));
-  font-weight: 200;
-}
-
-.status-stage .is-hero span {
-  color: var(--accent);
-  letter-spacing: 0.16em;
+  box-shadow:
+    0 0 0 1px rgba(155, 226, 154, 0.06),
+    0 1.2rem 3.2rem rgba(95, 191, 106, 0.14);
 }
 
 .board-support {
   width: 100%;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .board-support .figure {
@@ -3195,7 +3342,7 @@ button.figure:focus-visible {
 
 .capacity-split {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 0.33fr 0.67fr;
   gap: 1.5rem;
 }
 
@@ -3208,6 +3355,14 @@ button.figure:focus-visible {
   font-variant-numeric: tabular-nums;
 }
 
+.capacity-split .is-ops strong {
+  color: var(--gold);
+}
+
+.capacity-split .is-run strong {
+  color: var(--accent);
+}
+
 .capacity-split span {
   display: block;
   margin-top: 0.35rem;
@@ -3216,14 +3371,6 @@ button.figure:focus-visible {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--dim);
-}
-
-.capacity-split .is-ops strong {
-  color: var(--accent);
-}
-
-.capacity-split .is-run strong {
-  color: var(--accent);
 }
 
 .capacity-bar {
@@ -3241,7 +3388,8 @@ button.figure:focus-visible {
 }
 
 .capacity-bar .is-ops {
-  background: rgba(155, 226, 154, 0.45);
+  background: linear-gradient(90deg, var(--gold-soft), var(--gold));
+  box-shadow: 0 0 12px rgba(220, 172, 108, 0.35);
   transform-origin: left;
 }
 
@@ -3349,7 +3497,11 @@ button.figure:focus-visible {
   border: 1px solid rgba(220, 172, 108, 0.35);
   border-radius: var(--radius);
   background:
-    radial-gradient(ellipse 42% 140% at 0% 50%, rgba(220, 172, 108, 0.16), transparent 62%),
+    radial-gradient(
+      ellipse 42% 140% at 0% 50%,
+      rgba(220, 172, 108, 0.16),
+      transparent 62%
+    ),
     var(--surface);
 }
 
@@ -3460,8 +3612,7 @@ button.figure:focus-visible {
 }
 
 /* ================= Responsivo (retrato / celular) ================= */
-@media (orientation: portrait),
-(max-width: 760px) {
+@media (orientation: portrait), (max-width: 760px) {
   html {
     font-size: clamp(12px, 3.4vw, 17px);
   }
@@ -3567,15 +3718,6 @@ button.figure:focus-visible {
     font-size: 2.1rem;
   }
 
-  .status-stage .is-hero {
-    width: 100%;
-    min-height: 0;
-  }
-
-  .status-stage .is-hero b {
-    font-size: calc(4.4rem * var(--t));
-  }
-
   .pace-vs {
     padding: 0.4rem 0;
   }
@@ -3650,7 +3792,7 @@ button.figure:focus-visible {
     grid-template-columns: 2.25rem minmax(0, 1fr);
   }
 
-  .list li>span:last-child:not(.list-n) {
+  .list li > span:last-child:not(.list-n) {
     grid-column: 2;
   }
 
@@ -3714,7 +3856,6 @@ button.figure:focus-visible {
 
 /* ================= Acessibilidade ================= */
 @media (prefers-reduced-motion: reduce) {
-
   *,
   *::before,
   *::after {
